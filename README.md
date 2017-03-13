@@ -1,3 +1,4 @@
 # Projet
 
-voila
+Leonhard Schuwerk
+Fabian Bauer
