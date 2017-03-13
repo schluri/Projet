@@ -3,14 +3,35 @@ import QtQuick.Window 2.2
 
 Window {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+    width: 600
+    height: 360
+    title: qsTr("Jeu de l'arginée")
 
     MainForm {
-        anchors.fill: parent
-        mouseArea.onClicked: {
-            console.log(qsTr('Clicked on background. Text: "' + textEdit.text + '"'))
+              anchors.fill: parent
+              id: mainWindow
+              anchors.bottomMargin: 0
+              anchors.leftMargin: 0
+
+              mouseArea {
+                    onClicked: stateGroup.state = 'state1 '
+                               }
+
+              StateGroup {
+                            id: stateGroup
+                            states: [
+                                State {
+                                    name: "State1"
+
+                                    PropertyChanges {
+                                        target: mainWindow.image
+                                        x: mainWindow.rectangle.x
+                                        y: mainWindow.rectangle.y
+                                    }
+                    }
+           ]
+
+
         }
     }
 }
