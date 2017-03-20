@@ -4,8 +4,22 @@ import QtQuick.Layouts 1.2
 
 Item {
     id: mainWindow
-    width: 640
+    width: 760
     height: 480
+    property alias mouseArea14: mouseArea14
+    property alias rectangle14: rectangle14
+    property alias image5: image5
+    property alias mouseArea13: mouseArea13
+    property alias rectangle13: rectangle13
+    property alias image4: image4
+    property alias mouseArea12: mouseArea12
+    property alias rectangle12: rectangle12
+    property alias image3: image3
+    property alias mouseArea11: mouseArea11
+    property alias rectangle11: rectangle11
+    property alias image2: image2
+    property alias mouseArea10: mouseArea10
+    property alias mouseArea9: mouseArea9
     property alias rectangle10: rectangle10
     property alias rectangle9: rectangle9
     property alias textEdit1: textEdit1
@@ -222,28 +236,30 @@ Item {
 
     Image {
         id: image
-        x: 453
-        y: 65
-        width: 86
-        height: 90
+        x: 0
+        y: 0
+        width: 120
+        height: 120
+        visible: false
         z: 1
         source: "circle1.png"
     }
 
     Image {
         id: image1
-        x: 420
-        y: 306
-        width: 167
-        height: 100
+        x: 0
+        y: 0
+        width: 120
+        height: 120
+        visible: false
         z: 2
         source: "circle2.png"
     }
 
     TextEdit {
         id: textEdit
-        x: 469
-        y: 38
+        x: 396
+        y: 8
         width: 80
         height: 20
         text: qsTr("Player 1")
@@ -252,7 +268,7 @@ Item {
 
     TextEdit {
         id: textEdit1
-        x: 469
+        x: 396
         y: 170
         width: 80
         height: 20
@@ -262,21 +278,148 @@ Item {
 
     Rectangle {
         id: rectangle9
-        x: 453
-        y: 65
-        width: 86
-        height: 90
+        x: 380
+        y: 35
+        width: 120
+        height: 120
         color: "#ffffff"
         z: -2
+
+        MouseArea {
+            id: mouseArea9
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
     }
 
     Rectangle {
         id: rectangle10
-        x: 453
+        x: 380
         y: 196
-        width: 86
-        height: 90
+        width: 120
+        height: 120
         color: "#ffffff"
         z: -3
+
+        MouseArea {
+            id: mouseArea10
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
+    }
+
+    Image {
+        id: image2
+        x: 120
+        y: 0
+        width: 120
+        height: 120
+        visible: false
+        source: "circle1.png"
+        z: 1
+    }
+
+    Rectangle {
+        id: rectangle11
+        x: 506
+        y: 35
+        width: 120
+        height: 120
+        color: "#ffffff"
+        z: -2
+        MouseArea {
+            id: mouseArea11
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
+    }
+
+    Image {
+        id: image3
+        x: 632
+        y: 35
+        width: 120
+        height: 120
+        visible: true
+        source: "circle1.png"
+        z: 1
+    }
+
+    Rectangle {
+        id: rectangle12
+        x: 632
+        y: 35
+        width: 120
+        height: 120
+        color: "#ffffff"
+        z: -2
+        MouseArea {
+            id: mouseArea12
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
+    }
+
+    Image {
+        id: image4
+        x: 120
+        y: 0
+        width: 120
+        height: 120
+        visible: false
+        source: "circle2.png"
+        z: 2
+    }
+
+    Rectangle {
+        id: rectangle13
+        x: 506
+        y: 196
+        width: 120
+        height: 120
+        color: "#ffffff"
+        z: -3
+        MouseArea {
+            id: mouseArea13
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
+    }
+
+    Image {
+        id: image5
+        x: 632
+        y: 196
+        width: 120
+        height: 120
+        source: "circle2.png"
+        z: 2
+    }
+
+    Rectangle {
+        id: rectangle14
+        x: 632
+        y: 196
+        width: 120
+        height: 120
+        color: "#ffffff"
+        z: -3
+        MouseArea {
+            id: mouseArea14
+            x: 0
+            y: 0
+            width: 120
+            height: 120
+        }
     }
 }
