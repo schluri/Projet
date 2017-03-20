@@ -1,7 +1,8 @@
-import QtQuick 2.6
-import QtQuick.Window 2.2
+import QtQuick 2.5
+import QtQuick.Controls 1.4
+import QtQuick.Dialogs 1.2
 
-Window {
+ApplicationWindow {
     visible: true
     width: 600
     height: 360
@@ -14,7 +15,7 @@ Window {
               anchors.leftMargin: 0
 
               mouseArea {
-                    onClicked: stateGroup.state = 'state1 '
+                    onClicked: stateGroup.state = 'State1'
                                }
 
               StateGroup {

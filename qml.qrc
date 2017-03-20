@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
-        <file>Grid.png</file>
         <file>circle1.png</file>
         <file>circle2.png</file>
     </qresource>
