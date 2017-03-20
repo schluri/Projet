@@ -1,10 +1,11 @@
-import QtQuick 2.6
+import QtQuick 2.5
+import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.2
 
-Rectangle {
+Item {
     id: mainWindow
-
-    width: 600
-    height: 600
+    width: 640
+    height: 480
     property alias rectangle10: rectangle10
     property alias rectangle9: rectangle9
     property alias textEdit1: textEdit1
@@ -12,31 +13,24 @@ Rectangle {
     property alias image1: image1
     property alias image: image
     property alias mouseArea3: mouseArea3
-    property alias mouseArea4: mouseArea4
-    property alias mouseArea6: mouseArea6
-    property alias mouseArea7: mouseArea7
-    property alias mouseArea8: mouseArea8
-    property alias mouseArea1: mouseArea1
-    property alias mouseArea2: mouseArea2
-    property alias mouseArea: mouseArea
     property alias rectangle8: rectangle8
+    property alias mouseArea4: mouseArea4
     property alias rectangle7: rectangle7
+    property alias mouseArea5: mouseArea5
     property alias rectangle6: rectangle6
+    property alias mouseArea6: mouseArea6
     property alias rectangle5: rectangle5
+    property alias mouseArea7: mouseArea7
     property alias rectangle4: rectangle4
+    property alias mouseArea8: mouseArea8
     property alias rectangle3: rectangle3
+    property alias mouseArea1: mouseArea1
     property alias rectangle2: rectangle2
+    property alias mouseArea2: mouseArea2
     property alias rectangle1: rectangle1
+    property alias mouseArea: mouseArea
     property alias rectangle: rectangle
-
-    Item {
-        id: page
-        x: 0
-        y: 0
-        width: 600
-        height: 600
-        z: -1
-    }
+    z: 2147483646
 
     Rectangle {
         id: rectangle
@@ -45,10 +39,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.topMargin: 0
-        anchors.left: parent.left
-        anchors.leftMargin: 0
-
         MouseArea {
             id: mouseArea
             x: 0
@@ -57,6 +47,9 @@ Rectangle {
             height: 120
             z: 0
         }
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -68,10 +61,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 240
-        anchors.topMargin: 0
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea2
             x: 0
@@ -79,6 +68,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 240
+        anchors.topMargin: 0
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -90,10 +82,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 120
-        anchors.topMargin: 0
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea1
             x: 0
@@ -101,6 +89,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 120
+        anchors.topMargin: 0
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -112,10 +103,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 240
-        anchors.topMargin: 240
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea8
             x: 0
@@ -123,6 +110,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 240
+        anchors.topMargin: 240
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -134,10 +124,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 120
-        anchors.topMargin: 240
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea7
             x: 0
@@ -145,6 +131,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 120
+        anchors.topMargin: 240
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -156,10 +145,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 0
-        anchors.topMargin: 240
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea6
             x: 0
@@ -167,6 +152,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 0
+        anchors.topMargin: 240
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -178,10 +166,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 240
-        anchors.topMargin: 120
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea5
             x: 0
@@ -189,6 +173,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 240
+        anchors.topMargin: 120
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -200,10 +187,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 120
-        anchors.topMargin: 120
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea4
             x: 0
@@ -211,6 +194,9 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 120
+        anchors.topMargin: 120
+        anchors.left: parent.left
     }
 
     Rectangle {
@@ -222,10 +208,6 @@ Rectangle {
         color: "#ffffff"
         border.color: "#090808"
         anchors.top: parent.top
-        anchors.leftMargin: 0
-        anchors.topMargin: 120
-        anchors.left: parent.left
-
         MouseArea {
             id: mouseArea3
             x: 0
@@ -233,23 +215,28 @@ Rectangle {
             width: 120
             height: 120
         }
+        anchors.leftMargin: 0
+        anchors.topMargin: 120
+        anchors.left: parent.left
     }
 
     Image {
         id: image
-        x: 425
-        y: 64
-        width: 167
-        height: 100
+        x: 453
+        y: 65
+        width: 86
+        height: 90
+        z: 1
         source: "circle1.png"
     }
 
     Image {
         id: image1
-        x: 425
-        y: 187
+        x: 420
+        y: 306
         width: 167
         height: 100
+        z: 2
         source: "circle2.png"
     }
 
@@ -275,22 +262,21 @@ Rectangle {
 
     Rectangle {
         id: rectangle9
-        x: 457
-        y: 69
+        x: 453
+        y: 65
         width: 86
         height: 90
         color: "#ffffff"
-        z: -1
+        z: -2
     }
 
     Rectangle {
         id: rectangle10
-        x: 457
-        y: 192
+        x: 453
+        y: 196
         width: 86
         height: 90
         color: "#ffffff"
-        z: -1
+        z: -3
     }
-
 }
