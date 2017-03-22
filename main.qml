@@ -5,8 +5,8 @@ import QtQuick.Dialogs 1.2
 
 ApplicationWindow {
     visible: true
-    width: 800
-    height: 360
+    width: 1000
+    height: 600
     title: qsTr("Jeu de l'arginée")
 
     MainForm {
@@ -15,34 +15,34 @@ ApplicationWindow {
               anchors.bottomMargin: 0
               anchors.leftMargin: 0
 
-              mouseArea {
-                    onClicked: image.visible = true;
+              maTopLeft {
+                    onClicked: picYellowTopLeft.visible = true;
                                }
-              mouseArea1 {
+              maTopMiddle {
                     onClicked: {
-                            image4.visible = true;
+                            picBlueTopMiddle.visible = true;
 
                                 }
                           }
-              mouseArea2 {
+              maTopRight {
                     onClicked: stateGroup.state = 'State3'
                                }
-              mouseArea3 {
+              maLeft {
                     onClicked: stateGroup.state = 'State4'
                                }
-              mouseArea4 {
+              maCenter {
                     onClicked: stateGroup.state = 'State5'
                                }
-              mouseArea5 {
+              maRight {
                     onClicked: stateGroup.state = 'State6'
                                }
-              mouseArea6 {
+              maBottomLeft {
                     onClicked: stateGroup.state = 'State7'
                                }
-              mouseArea7 {
+              maBottomMiddle {
                     onClicked: stateGroup.state = 'State8'
                                }
-              mouseArea8 {
+              maBottomRight {
                     onClicked: stateGroup.state = 'State9'
                                }
 
