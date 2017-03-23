@@ -16,19 +16,20 @@ ApplicationWindow {
               anchors.leftMargin: 0
 
               maTopLeft {
-                    onClicked: picYellowTopLeft.visible = true;
+                    onClicked: picYellowTopLeft.visible = true
                                }
               maTopMiddle {
                     onClicked: {
-                            picBlueTopMiddle.visible = true;
+                            picBlueTopMiddle.visible = true
+                        game.changePlayer()
 
                                 }
                           }
               maTopRight {
-                    onClicked: stateGroup.state = 'State3'
+                    onClicked: game.test()
                                }
               maLeft {
-                    onClicked: stateGroup.state = 'State4'
+                    onClicked: game.showToken()
                                }
               maCenter {
                     onClicked: stateGroup.state = 'State5'

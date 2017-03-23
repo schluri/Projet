@@ -2,10 +2,17 @@
 
 Field::Field(QObject *parent) : QObject(parent)
 {
+    /*
     L = 3;
     C = 3;
     Alloc();
     //Init(vd);
+    */
+}
+
+void Field::test()
+{
+    qDebug() <<"Test";
 }
 
 /*
@@ -17,6 +24,7 @@ Field::~Field(){
 }
 */
 
+/*
 QString Field::readField()
 {
     return QString::number(420);
@@ -40,9 +48,11 @@ void Field::Free(){
     }
     delete [] T;
 }
+*/
 
 void Field::changePlayer()
 {
+
  if (player == 0)
  {
      player = 1;
@@ -51,4 +61,12 @@ void Field::changePlayer()
  {
      player = 0;
  }
+
+ qDebug() << "Player changed ... ";
 }
+
+void Field::showToken()
+{
+    qDebug() << "Token shown ...";
+}
+

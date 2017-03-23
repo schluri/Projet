@@ -2,6 +2,7 @@
 #define FIELD_H
 
 #include <QObject>
+#include <QDebug>
 
 class Field : public QObject
 {
@@ -12,16 +13,18 @@ public:
 
     int player = 0;
 
+    Q_INVOKABLE void test();
     Q_INVOKABLE void changePlayer();
+    Q_INVOKABLE void showToken();
 
 
+   // Q_PROPERTY(QString cptQML READ readField NOTIFY fieldChanged);
+   // QString readField();
 
-    Q_PROPERTY(QString cptQML READ readField NOTIFY fieldChanged);
-    QString readField();
 
 
 signals:
-    void fieldChanged();
+   // void fieldChanged();
 
 private:
     int L;
