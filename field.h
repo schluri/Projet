@@ -19,6 +19,10 @@ public:
     Q_INVOKABLE void changePlayer();
     Q_INVOKABLE void setField(int l, int c);
     Q_INVOKABLE void setPosition(int l, int c);
+    Q_INVOKABLE void upMoves();
+    Q_INVOKABLE int showMovesBlue();
+    Q_INVOKABLE int showMovesYellow();
+
 
 
    // Q_PROPERTY(QString cptQML READ readField NOTIFY fieldChanged);
@@ -37,6 +41,9 @@ private:
 
     int currentLine = 420;
     int currentColumn = 420;
+
+    int movesBlue = 0;
+    int movesYellow = 0;
 
    void Alloc();
    void Init();

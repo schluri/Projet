@@ -87,6 +87,25 @@ void Field::setPosition(int l, int c)
     currentColumn = c;
 }
 
+void Field::upMoves()
+{
+    if (player == 0)
+        movesBlue ++;
+    else
+        movesYellow ++;
+}
+
+int Field::showMovesBlue()
+{
+    return movesBlue;
+}
+
+int Field::showMovesYellow()
+{
+    return movesYellow;
+}
+
+
 /*
 QString Field::readField()
 {
