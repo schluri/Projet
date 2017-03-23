@@ -40,12 +40,6 @@ void Field::Free(){
     delete [] T;
 }
 
-void Field::test()
-{
-      // int a = T[currentLine][currentColumn];
-       // qDebug << "T[currentLine][currentColumn] = " << a;
-}
-
 int Field::showPlayer()
 {
     return player;
@@ -57,16 +51,15 @@ int Field::showField()
     return a;
 }
 
-
 void Field::changePlayer()
 {
 
-     if (player == 0)
+     if (player == 0 && movesYellow < 3)
      {
          player = 1;
          qDebug() << "Yellow's turn!";
      }
-     else
+     if (player == 1 && movesBlue < 3)
      {
          player = 0;
          qDebug() << "Blue's turn!";
@@ -103,6 +96,50 @@ int Field::showMovesBlue()
 int Field::showMovesYellow()
 {
     return movesYellow;
+}
+
+void Field::checkForWinner()
+{
+//----------------------------------------------------------------------check if Blue is winner
+    for (int i=0;i<3;i++)
+    {
+        if(T[i][0] == 0 && T[i][1] == 0 && T[i][2] == 0)
+        {qDebug() << "Blue wins ! ! !";}
+    }
+
+    for (int i=0;i<3;i++)
+    {
+        if(T[0][i] == 0 && T[0][i] == 0 && T[0][i] == 0)
+        {qDebug() << "Blue wins ! ! !";}
+    }
+
+    if(T[0][0] == 0 && T[1][1] == 0 && T[2][2] == 0)
+        {qDebug() << "Blue wins ! ! !";}
+
+    if(T[2][0] == 0 && T[1][1] == 0 && T[0][2] == 0)
+        {qDebug() << "Blue wins ! ! !";}
+
+
+//----------------------------------------------------------------------check if Yellow is winner
+
+
+    for (int i=0;i<3;i++)
+    {
+        if(T[i][0] == 1 && T[i][1] == 1 && T[i][2] == 1)
+        {qDebug() << "Yellow wins ! ! !";}
+    }
+
+    for (int i=0;i<3;i++)
+    {
+        if(T[0][i] == 1 && T[0][i] == 1 && T[0][i] == 1)
+        {qDebug() << "Yellow wins ! ! !";}
+    }
+
+    if(T[0][0] == 1 && T[1][1] == 1 && T[2][2] == 1)
+        {qDebug() << "Yellow wins ! ! !";}
+
+    if(T[2][0] == 1 && T[1][1] == 1 && T[0][2] == 1)
+        {qDebug() << "Yellow wins ! ! !";}
 }
 
 

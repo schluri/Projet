@@ -12,8 +12,6 @@ public:
     //~Field();
 
 
-
-    Q_INVOKABLE void test();
     Q_INVOKABLE int showPlayer();
     Q_INVOKABLE int showField();
     Q_INVOKABLE void changePlayer();
@@ -22,6 +20,7 @@ public:
     Q_INVOKABLE void upMoves();
     Q_INVOKABLE int showMovesBlue();
     Q_INVOKABLE int showMovesYellow();
+    Q_INVOKABLE void checkForWinner();
 
 
 
@@ -44,6 +43,8 @@ private:
 
     int movesBlue = 0;
     int movesYellow = 0;
+
+    int winner = 420;
 
    void Alloc();
    void Init();

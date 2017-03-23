@@ -7,7 +7,7 @@ ApplicationWindow {
     visible: true
     width: 1000
     height: 600
-    title: qsTr("Jeu de l'arginée")
+    title: qsTr("Jeu de l'araignée")
 
     MainForm {
               anchors.fill: parent
@@ -23,14 +23,13 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueTopLeft.visible = true
                   game.setField(0,0)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowTopLeft.visible = true
                   game.setField(0,0)
                   game.upMoves()
-                  game.changePlayer()
                   }
 
                   switch(game.showMovesYellow())
@@ -57,8 +56,12 @@ ApplicationWindow {
                       case 3:
                           pic3Player2.visible = false
                           break
+                       }
+
+
+                  game.checkForWinner();
+                  game.changePlayer()
                   }
-                               }
               }
               maTopMiddle {
                   onClicked: {
@@ -68,14 +71,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueTopMiddle.visible = true
                   game.setField(0,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowTopMiddle.visible = true
                   game.setField(0,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -103,7 +106,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
+
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
               }
               maTopRight {
                   onClicked: {
@@ -113,14 +119,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueTopRight.visible = true
                   game.setField(0,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowTopRight.visible = true
                   game.setField(0,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -148,7 +154,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
+
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
                                }
               maLeft {
                     onClicked: {
@@ -158,14 +167,14 @@ ApplicationWindow {
                     if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                     {picBlueLeft.visible = true
                     game.setField(1,0)
-                    game.upMoves();
-                    game.changePlayer()}
+                    game.upMoves()
+                    }
 
                     if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                     {picYellowLeft.visible = true
                     game.setField(1,0)
-                    game.upMoves();
-                    game.changePlayer()}
+                    game.upMoves()
+                    }
 
 
                     switch(game.showMovesYellow())
@@ -194,6 +203,8 @@ ApplicationWindow {
                             break
                     }
 
+                    game.checkForWinner();
+                    game.changePlayer()
                     }
                                }
               maCenter {
@@ -204,14 +215,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueCenter.visible = true
                   game.setField(1,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowCenter.visible = true
                   game.setField(1,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -240,6 +251,8 @@ ApplicationWindow {
                           break
                   }
 
+                  game.checkForWinner();
+                  game.changePlayer()
                   }
                                }
               maRight {
@@ -250,14 +263,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueRight.visible = true
                   game.setField(1,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowRight.visible = true
                   game.setField(1,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -285,7 +298,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
+
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
                                }
               maBottomLeft {
                   onClicked: {
@@ -295,14 +311,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueBottomLeft.visible = true
                   game.setField(2,0)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowBottomLeft.visible = true
                   game.setField(2,0)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -330,7 +346,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
+
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
                                }
               maBottomMiddle {
                   onClicked: {
@@ -340,14 +359,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueBottomMiddle.visible = true
                   game.setField(2,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowBottomMiddle.visible = true
                   game.setField(2,1)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -375,7 +394,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
+
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
                                }
               maBottomRight {
                   onClicked: {
@@ -385,14 +407,14 @@ ApplicationWindow {
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
                   {picBlueBottomRight.visible = true
                   game.setField(2,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
                   if(game.showPlayer()==1 && game.showMovesYellow() < 3 && game.showField() == 420)
                   {picYellowBottomRight.visible = true
                   game.setField(2,2)
-                  game.upMoves();
-                  game.changePlayer()}
+                  game.upMoves()
+                  }
 
 
                   switch(game.showMovesYellow())
@@ -420,8 +442,10 @@ ApplicationWindow {
                           pic3Player2.visible = false
                           break
                   }
-                               }
-                               }
 
-    }
+                  game.checkForWinner();
+                  game.changePlayer()
+                  }
+                  }
+              }
 }
