@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick
 
-CONFIG += c++11
+CONFIG += c++11 #\
+        #+= console
 
 SOURCES += main.cpp \
     field.cpp

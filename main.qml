@@ -16,61 +16,151 @@ ApplicationWindow {
               anchors.leftMargin: 0
 
               maTopLeft {
-                    onClicked: picYellowTopLeft.visible = true
-                               }
-              maTopMiddle {
-                    onClicked: {
-                            picBlueTopMiddle.visible = true
-                        game.changePlayer()
+                  onClicked: {
 
-                                }
-                          }
+                  game.setPosition(0,0)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueTopLeft.visible = true
+                  game.setField(0,0)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowTopLeft.visible = true
+                  game.setField(0,0)
+                  game.changePlayer()}
+                               }
+              }
+              maTopMiddle {
+                  onClicked: {
+
+                  game.setPosition(0,1)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueTopMiddle.visible = true
+                  game.setField(0,1)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowTopMiddle.visible = true
+                  game.setField(0,1)
+                  game.changePlayer()}
+                               }
+              }
               maTopRight {
-                    onClicked: game.test()
+                  onClicked: {
+
+                  game.setPosition(0,2)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueTopRight.visible = true
+                  game.setField(0,2)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowTopRight.visible = true
+                  game.setField(0,2)
+                  game.changePlayer()}
+                               }
                                }
               maLeft {
-                    onClicked: game.showToken()
+                    onClicked: {
+
+                    game.setPosition(1,0)
+
+                    if(game.showPlayer()==0 && game.showField() == 420)
+                    {picBlueLeft.visible = true
+                    game.setField(1,0)
+                    game.changePlayer()}
+
+                    if(game.showPlayer()==1 && game.showField() == 420)
+                    {picYellowLeft.visible = true
+                    game.setField(1,0)
+                    game.changePlayer()}
+
+                    }
                                }
               maCenter {
-                    onClicked: stateGroup.state = 'State5'
+                  onClicked: {
+
+                  game.setPosition(1,1)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueCenter.visible = true
+                  game.setField(1,1)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowCenter.visible = true
+                  game.setField(1,1)
+                  game.changePlayer()}
+
+                  }
                                }
               maRight {
-                    onClicked: stateGroup.state = 'State6'
+                  onClicked: {
+
+                  game.setPosition(1,2)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueRight.visible = true
+                  game.setField(1,2)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowRight.visible = true
+                  game.setField(1,2)
+                  game.changePlayer()}
+                               }
                                }
               maBottomLeft {
-                    onClicked: stateGroup.state = 'State7'
+                  onClicked: {
+
+                  game.setPosition(2,0)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueBottomLeft.visible = true
+                  game.setField(2,0)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowBottomLeft.visible = true
+                  game.setField(2,0)
+                  game.changePlayer()}
+                               }
                                }
               maBottomMiddle {
-                    onClicked: stateGroup.state = 'State8'
+                  onClicked: {
+
+                  game.setPosition(2,1)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueBottomMiddle.visible = true
+                  game.setField(2,1)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowBottomMiddle.visible = true
+                  game.setField(2,1)
+                  game.changePlayer()}
+                               }
                                }
               maBottomRight {
-                    onClicked: stateGroup.state = 'State9'
+                  onClicked: {
+
+                  game.setPosition(2,2)
+
+                  if(game.showPlayer()==0 && game.showField() == 420)
+                  {picBlueBottomRight.visible = true
+                  game.setField(2,2)
+                  game.changePlayer()}
+
+                  if(game.showPlayer()==1 && game.showField() == 420)
+                  {picYellowBottomRight.visible = true
+                  game.setField(2,2)
+                  game.changePlayer()}
+                               }
                                }
 
-              StateGroup {
-                            id: stateGroup
-                            states: [
-                                State {
-                                    name: "State1"
-
-                                    PropertyChanges {
-                                        target: mainWindow.image
-                                        x: mainWindow.rectangle.x
-                                        y: mainWindow.rectangle.y
-                                    }
-                    },
-                                 State {
-                                     name: "State2"
-
-                                     PropertyChanges {
-                                         target: mainWindow.image1
-                                         x: mainWindow.rectangle2.x
-                                         y: mainWindow.rectangle2.y
-                                     }
-                     }
-           ]
-
-
-        }
     }
 }
