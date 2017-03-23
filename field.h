@@ -11,11 +11,14 @@ public:
     explicit Field(QObject *parent = 0);
     //~Field();
 
-    int player = 0;
+
 
     Q_INVOKABLE void test();
+    Q_INVOKABLE int showPlayer();
+    Q_INVOKABLE int showField();
     Q_INVOKABLE void changePlayer();
-    Q_INVOKABLE void showToken();
+    Q_INVOKABLE void setField(int l, int c);
+    Q_INVOKABLE void setPosition(int l, int c);
 
 
    // Q_PROPERTY(QString cptQML READ readField NOTIFY fieldChanged);
@@ -27,11 +30,13 @@ signals:
    // void fieldChanged();
 
 private:
-    int L;
-    int C;
+    int L = 3;
+    int C = 3;
     int** T;
+    int player = 0;
 
-
+    int currentLine = 420;
+    int currentColumn = 420;
 
    void Alloc();
    void Init();

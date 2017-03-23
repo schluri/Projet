@@ -1,18 +1,15 @@
 #include "field.h"
+#include <QQmlProperty>
+//#include <iostream>
+
+//using namespace std;
+
+
 
 Field::Field(QObject *parent) : QObject(parent)
 {
-    /*
-    L = 3;
-    C = 3;
     Alloc();
-    //Init(vd);
-    */
-}
-
-void Field::test()
-{
-    qDebug() <<"Test";
+    Init();
 }
 
 /*
@@ -24,12 +21,6 @@ Field::~Field(){
 }
 */
 
-/*
-QString Field::readField()
-{
-    return QString::number(420);
-}
-
 void Field::Alloc(){
     T = new int*[L];
     for(int i=0; i<L; i++)
@@ -39,7 +30,7 @@ void Field::Alloc(){
 void Field::Init(){
     for(int i=0; i<L; i++)
         for(int j=0; j<C; j++)
-            T[i][j]=0;
+            T[i][j]=420;
 }
 
 void Field::Free(){
@@ -48,25 +39,57 @@ void Field::Free(){
     }
     delete [] T;
 }
-*/
+
+void Field::test()
+{
+      // int a = T[currentLine][currentColumn];
+       // qDebug << "T[currentLine][currentColumn] = " << a;
+}
+
+int Field::showPlayer()
+{
+    return player;
+}
+
+int Field::showField()
+{
+    int a = T[currentLine][currentColumn];
+    return a;
+}
+
 
 void Field::changePlayer()
 {
 
- if (player == 0)
- {
-     player = 1;
- }
- else
- {
-     player = 0;
- }
+     if (player == 0)
+     {
+         player = 1;
+         qDebug() << "Yellow's turn!";
+     }
+     else
+     {
+         player = 0;
+         qDebug() << "Blue's turn!";
+     }
 
- qDebug() << "Player changed ... ";
+
 }
 
-void Field::showToken()
+void Field::setField(int l, int c)
 {
-    qDebug() << "Token shown ...";
+    T[l][c] = player;
+
 }
 
+void Field::setPosition(int l, int c)
+{
+    currentLine = l;
+    currentColumn = c;
+}
+
+/*
+QString Field::readField()
+{
+    return QString::number(420);
+}
+*/
