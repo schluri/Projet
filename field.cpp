@@ -53,19 +53,16 @@ int Field::showField()
 
 void Field::changePlayer()
 {
-
-     if (player == 0 && movesYellow < 3)
+     if (player == 0)
      {
          player = 1;
-         qDebug() << "Yellow's turn!";
+        // qDebug() << "Yellow's turn!";
      }
-     if (player == 1 && movesBlue < 3)
+     else
      {
          player = 0;
-         qDebug() << "Blue's turn!";
+        // qDebug() << "Blue's turn!";
      }
-
-
 }
 
 void Field::setField(int l, int c)
@@ -103,20 +100,20 @@ void Field::checkForWinner()
 //----------------------------------------------------------------------check if Blue is winner
     for (int i=0;i<3;i++)
     {
-        if(T[i][0] == 0 && T[i][1] == 0 && T[i][2] == 0)
+        if(T[i][0] == 0 && T[i][1] == 0 && T[i][2] == 0)    // Check all 3 ligns
         {qDebug() << "Blue wins ! ! !";}
     }
 
     for (int i=0;i<3;i++)
     {
-        if(T[0][i] == 0 && T[0][i] == 0 && T[0][i] == 0)
+        if(T[0][i] == 0 && T[1][i] == 0 && T[2][i] == 0)    // Check all 3 columns
         {qDebug() << "Blue wins ! ! !";}
     }
 
-    if(T[0][0] == 0 && T[1][1] == 0 && T[2][2] == 0)
+    if(T[0][0] == 0 && T[1][1] == 0 && T[2][2] == 0)        // Check 1. Diagonal
         {qDebug() << "Blue wins ! ! !";}
 
-    if(T[2][0] == 0 && T[1][1] == 0 && T[0][2] == 0)
+    if(T[2][0] == 0 && T[1][1] == 0 && T[0][2] == 0)        // Check 2. Diagonal
         {qDebug() << "Blue wins ! ! !";}
 
 
@@ -125,21 +122,31 @@ void Field::checkForWinner()
 
     for (int i=0;i<3;i++)
     {
-        if(T[i][0] == 1 && T[i][1] == 1 && T[i][2] == 1)
+        if(T[i][0] == 1 && T[i][1] == 1 && T[i][2] == 1)    // Check all 3 ligns
         {qDebug() << "Yellow wins ! ! !";}
     }
 
     for (int i=0;i<3;i++)
     {
-        if(T[0][i] == 1 && T[0][i] == 1 && T[0][i] == 1)
+        if(T[0][i] == 1 && T[1][i] == 1 && T[2][i] == 1)    // Check all 3 columns
         {qDebug() << "Yellow wins ! ! !";}
     }
 
-    if(T[0][0] == 1 && T[1][1] == 1 && T[2][2] == 1)
+    if(T[0][0] == 1 && T[1][1] == 1 && T[2][2] == 1)        // Check 1. Diagonal
         {qDebug() << "Yellow wins ! ! !";}
 
-    if(T[2][0] == 1 && T[1][1] == 1 && T[0][2] == 1)
-        {qDebug() << "Yellow wins ! ! !";}
+    if(T[2][0] == 1 && T[1][1] == 1 && T[0][2] == 1)        // Check 2. Diagonal
+    {qDebug() << "Yellow wins ! ! !";}
+}
+
+void Field::test()
+{
+    if(player == 0)
+    {qDebug() << "Player = 0";}
+    if(player == 1)
+    {qDebug() << "Player = 1";}
+    if(player != 0 && player != 1)
+    {qDebug() << "Player ist weder 0 noch 1";}
 }
 
 

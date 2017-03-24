@@ -21,6 +21,9 @@ public:
     Q_INVOKABLE int showMovesBlue();
     Q_INVOKABLE int showMovesYellow();
     Q_INVOKABLE void checkForWinner();
+    Q_INVOKABLE void test();
+
+    int player = 1;
 
 
 
@@ -36,7 +39,7 @@ private:
     int L = 3;
     int C = 3;
     int** T;
-    int player = 0;
+
 
     int currentLine = 420;
     int currentColumn = 420;
