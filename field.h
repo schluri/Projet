@@ -24,7 +24,9 @@ public:
     Q_INVOKABLE void test();
     Q_INVOKABLE void resetGame();
 
-    int player = 1;
+        int player = 1;
+
+
 
 
 
@@ -47,6 +49,8 @@ private:
 
     int movesBlue = 0;
     int movesYellow = 0;
+
+
 
     int winner = 420;
 

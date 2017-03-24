@@ -21,7 +21,8 @@ ApplicationWindow {
                   game.setPosition(0,0)
 
                   if(game.showPlayer()==0 && game.showMovesBlue() < 3 && game.showField() == 420)
-                  {picBlueTopLeft.visible = true
+                  {
+                      picBlueTopLeft.visible = true
                   game.setField(0,0)
                   game.upMoves()
                   game.checkForWinner()
@@ -466,7 +467,7 @@ ApplicationWindow {
                   }
               buttonReset.onClicked: {
 
-                  game.resetGame()
+                  game.resetGame()      // resets all Game Variables
 
                   picYellowTopLeft.visible = false
                   picYellowTopMiddle.visible = false

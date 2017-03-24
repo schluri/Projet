@@ -6,6 +6,8 @@ Item {
     id: mainWindow
     width: 800
     height: 600
+    property alias recInfoBackground: recInfoBackground
+    property alias info: info
     property alias pic1Player1: pic1Player1
     property alias buttonReset: buttonReset
     property alias mainWindow: mainWindow
@@ -547,5 +549,28 @@ Item {
         width: 100
         height: 50
         text: qsTr("Reset Game")
+    }
+
+    Text {
+        id: info
+        x: 220
+        y: 444
+        width: 200
+        height: 50
+        text: "Geiler Shit!"
+        fontSizeMode: Text.FixedSize
+        wrapMode: Text.NoWrap
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        font.family: "Verdana"
+        font.pixelSize: 22
+
+        Rectangle {
+            id: recInfoBackground
+            color: "#ffffff"
+            border.color: "#675858"
+            z: -1
+            anchors.fill: parent
+        }
     }
 }
