@@ -149,6 +149,17 @@ void Field::test()
     {qDebug() << "Player ist weder 0 noch 1";}
 }
 
+void Field::resetGame()
+{
+    Init(); //Reset of the stored Field values
+    movesBlue = 0;
+    movesYellow = 0;
+    currentLine = 420;
+    currentColumn = 420;
+    winner = 420;
+    player = 1;
+}
+
 
 /*
 QString Field::readField()

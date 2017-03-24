@@ -5,8 +5,8 @@ import QtQuick.Dialogs 1.2
 
 ApplicationWindow {
     visible: true
-    width: 1000
-    height: 400
+    width: 800
+    height: 600
     title: qsTr("Jeu de l'araignée")
 
     MainForm {
@@ -464,5 +464,37 @@ ApplicationWindow {
 
                   }
                   }
+              buttonReset.onClicked: {
+
+                  game.resetGame()
+
+                  picYellowTopLeft.visible = false
+                  picYellowTopMiddle.visible = false
+                  picYellowTopRight.visible = false
+                  picYellowLeft.visible = false
+                  picYellowCenter.visible = false
+                  picYellowRight.visible = false
+                  picYellowBottomLeft.visible = false
+                  picYellowBottomMiddle.visible = false
+                  picYellowBottomRight.visible = false
+
+                  picBlueTopLeft.visible = false
+                  picBlueTopMiddle.visible = false
+                  picBlueTopRight.visible = false
+                  picBlueLeft.visible = false
+                  picBlueCenter.visible = false
+                  picBlueRight.visible = false
+                  picBlueBottomLeft.visible = false
+                  picBlueBottomMiddle.visible = false
+                  picBlueBottomRight.visible = false
+
+                  pic1Player1.visible = true
+                  pic2Player1.visible = true
+                  pic3Player1.visible = true
+
+                  pic1Player2.visible = true
+                  pic2Player2.visible = true
+                  pic3Player2.visible = true
               }
+    }
 }

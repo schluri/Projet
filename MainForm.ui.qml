@@ -4,8 +4,10 @@ import QtQuick.Layouts 1.2
 
 Item {
     id: mainWindow
-    width: 1200
+    width: 800
     height: 600
+    property alias buttonReset: buttonReset
+    property alias mainWindow: mainWindow
     property alias pic3Player2: pic3Player2
     property alias pic2Player2: pic2Player2
     property alias pic1Player2: pic1Player2
@@ -56,7 +58,7 @@ Item {
     property alias recTopLeft: recTopLeft
     property alias textEdit1: textEdit1
     property alias textEdit: textEdit
-    z: 2147483646
+    z: 100
 
     Rectangle {
         id: recTopLeft
@@ -502,8 +504,6 @@ Item {
         }
     }
 
-
-
     Rectangle {
         id: rec2Player2
         x: 506
@@ -538,5 +538,14 @@ Item {
             anchors.fill: parent
             source: "circle2.png"
         }
+    }
+
+    Button {
+        id: buttonReset
+        x: 42
+        y: 444
+        width: 100
+        height: 50
+        text: qsTr("Reset Game")
     }
 }
