@@ -4,5 +4,7 @@
         <file>MainForm.ui.qml</file>
         <file>circle1.png</file>
         <file>circle2.png</file>
+        <file>KreuzBlau.png</file>
+        <file>KreuzGelb.png</file>
     </qresource>
 </RCC>

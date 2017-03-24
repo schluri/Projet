@@ -6,6 +6,7 @@ Item {
     id: mainWindow
     width: 800
     height: 600
+    property alias pic1Player1: pic1Player1
     property alias buttonReset: buttonReset
     property alias mainWindow: mainWindow
     property alias pic3Player2: pic3Player2
@@ -13,7 +14,6 @@ Item {
     property alias pic1Player2: pic1Player2
     property alias pic3Player1: pic3Player1
     property alias pic2Player1: pic2Player1
-    property alias pic1Player1: pic1Player1
     property alias picBlueLeft: picBlueLeft
     property alias picYellowLeft: picYellowLeft
     property alias picBlueCenter: picBlueCenter
@@ -84,7 +84,7 @@ Item {
             anchors.fill: parent
             z: 2
             visible: false
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
 
         Image {
@@ -92,7 +92,7 @@ Item {
             anchors.fill: parent
             z: 2
             visible: false
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
         anchors.leftMargin: 0
         anchors.topMargin: 0
@@ -121,7 +121,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -131,7 +131,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
         anchors.topMargin: 0
@@ -160,7 +160,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -170,7 +170,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
         anchors.topMargin: 0
@@ -199,7 +199,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -209,7 +209,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
         anchors.topMargin: 240
@@ -238,7 +238,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -248,7 +248,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
         anchors.topMargin: 240
@@ -277,7 +277,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -287,7 +287,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 0
         anchors.topMargin: 240
@@ -316,7 +316,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -326,7 +326,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
         anchors.topMargin: 120
@@ -355,7 +355,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -365,7 +365,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
         anchors.topMargin: 120
@@ -394,7 +394,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
 
         Image {
@@ -404,7 +404,7 @@ Item {
             z: 2
             visible: false
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
         anchors.leftMargin: 0
         anchors.topMargin: 120
@@ -445,7 +445,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
     }
 
@@ -463,7 +463,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
     }
 
@@ -482,7 +482,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle1.png"
+            source: "KreuzGelb.png"
         }
     }
 
@@ -500,7 +500,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
     }
 
@@ -518,7 +518,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
     }
 
@@ -536,7 +536,7 @@ Item {
             z: 2
             visible: true
             anchors.fill: parent
-            source: "circle2.png"
+            source: "KreuzBlau.png"
         }
     }
 
