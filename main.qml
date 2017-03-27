@@ -12,11 +12,13 @@ ApplicationWindow {
     MainForm {
               anchors.fill: parent
               id: mainWindow
+
               anchors.bottomMargin: 0
               anchors.leftMargin: 0
 
               maTopLeft {
-                  onClicked: {
+                  onClicked:
+                  {
 
                   game.setPosition(0,0)
 
@@ -63,6 +65,15 @@ ApplicationWindow {
                           break
                        }
 
+                  }
+                  onEntered:
+                  {
+                      recTopLeft.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recTopLeft.color = "white"
                   }
               }
               maTopMiddle {
@@ -114,6 +125,15 @@ ApplicationWindow {
                   }
 
                   }
+                  onEntered:
+                  {
+                      recTopMiddle.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recTopMiddle.color = "white"
+                  }
               }
               maTopRight {
                   onClicked: {
@@ -164,7 +184,16 @@ ApplicationWindow {
                   }
 
                   }
-                               }
+                  onEntered:
+                  {
+                      recTopRight.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recTopRight.color = "white"
+                  }
+              }
               maLeft {
                     onClicked: {
 
@@ -214,7 +243,16 @@ ApplicationWindow {
                     }
 
                     }
-                               }
+                    onEntered:
+                    {
+                        recLeft.color = "lightgreen"
+                    }
+                    onExited:
+
+                    {
+                        recLeft.color = "white"
+                    }
+              }
               maCenter {
                   onClicked: {
 
@@ -264,7 +302,16 @@ ApplicationWindow {
                   }
 
                   }
-                               }
+                  onEntered:
+                  {
+                      recCenter.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recCenter.color = "white"
+                  }
+              }
               maRight {
                   onClicked: {
 
@@ -314,7 +361,16 @@ ApplicationWindow {
                   }
 
                   }
-                               }
+                  onEntered:
+                  {
+                      recRight.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recRight.color = "white"
+                  }
+              }
               maBottomLeft {
                   onClicked: {
 
@@ -364,7 +420,16 @@ ApplicationWindow {
                   }
 
                   }
-                               }
+                  onEntered:
+                  {
+                      recBottomLeft.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recBottomLeft.color = "white"
+                  }
+              }
               maBottomMiddle {
                   onClicked: {
 
@@ -414,7 +479,16 @@ ApplicationWindow {
                   }
 
                   }
-                               }
+                  onEntered:
+                  {
+                      recBottomMiddle.color = "lightgreen"
+                  }
+                  onExited:
+
+                  {
+                      recBottomMiddle.color = "white"
+                  }
+              }
               maBottomRight {
                   onClicked: {
 
@@ -464,7 +538,16 @@ ApplicationWindow {
                   }
 
                   }
+                  onEntered:
+                  {
+                      recBottomRight.color = "lightgreen"
                   }
+                  onExited:
+
+                  {
+                      recBottomRight.color = "white"
+                  }
+              }
               buttonReset.onClicked: {
 
                   game.resetGame()      // resets all Game Variables
@@ -497,5 +580,8 @@ ApplicationWindow {
                   pic2Player2.visible = true
                   pic3Player2.visible = true
               }
+              //info  {
+              //    if(game.showPlayer()==0)
+              //}
     }
 }

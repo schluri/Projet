@@ -66,8 +66,6 @@ Item {
         id: recTopLeft
         width: 120
         height: 120
-        color: "#ffffff"
-        border.color: "#090808"
         anchors.top: parent.top
         MouseArea {
             id: maTopLeft
@@ -76,14 +74,17 @@ Item {
             width: 120
             height: 120
             z: 0
-
+            hoverEnabled: true
         }
 
         Image {
             id: picBlueTopLeft
             x: 632
             y: 196
-            anchors.fill: parent
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
             source: "KreuzBlau.png"
@@ -91,7 +92,10 @@ Item {
 
         Image {
             id: picYellowTopLeft
-            anchors.fill: parent
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
             source: "KreuzGelb.png"
@@ -116,13 +120,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowTopRight
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -130,9 +138,12 @@ Item {
             id: picBlueTopRight
             x: -9
             y: -9
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
@@ -155,13 +166,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowTopMiddle
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -169,9 +184,12 @@ Item {
             id: picBlueTopMiddle
             x: 0
             y: 0
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
@@ -194,13 +212,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowBottomRight
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -208,9 +230,12 @@ Item {
             id: picBlueBottomRight
             x: 0
             y: 0
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
@@ -233,13 +258,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowBottomMiddle
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -247,9 +276,12 @@ Item {
             id: picBlueBottomMiddle
             x: 9
             y: 9
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
@@ -272,13 +304,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowBottomLeft
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -286,9 +322,12 @@ Item {
             id: picBlueBottomLeft
             x: 1
             y: 1
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 0
@@ -311,13 +350,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowRight
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -325,9 +368,12 @@ Item {
             id: picBlueRight
             x: -8
             y: -8
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 240
@@ -350,13 +396,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowCenter
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -364,9 +414,12 @@ Item {
             id: picBlueCenter
             x: -6
             y: -6
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 120
@@ -389,13 +442,17 @@ Item {
             y: 0
             width: 120
             height: 120
+            hoverEnabled: true
         }
 
         Image {
             id: picYellowLeft
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzGelb.png"
         }
 
@@ -403,9 +460,12 @@ Item {
             id: picBlueLeft
             x: 9
             y: 9
+            width: 100
+            height: 100
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
             z: 2
             visible: false
-            anchors.fill: parent
             source: "KreuzBlau.png"
         }
         anchors.leftMargin: 0
