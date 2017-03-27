@@ -16,6 +16,7 @@ public:
     Q_INVOKABLE int showField();
     Q_INVOKABLE void changePlayer();
     Q_INVOKABLE void setField(int l, int c);
+    Q_INVOKABLE void setFieldEmpty(int l, int c);
     Q_INVOKABLE void setPosition(int l, int c);
     Q_INVOKABLE void upMoves();
     Q_INVOKABLE int showMovesBlue();
