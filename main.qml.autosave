@@ -419,7 +419,7 @@ ApplicationWindow {
               buttonRules.onClicked: {
 
                   rules.show()
-}
+                }
 
               function changeTextField()
                             {
