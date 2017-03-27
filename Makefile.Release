@@ -145,6 +145,7 @@ compiler_rcc_clean:
 release\qrc_qml.cpp: qml.qrc \
 		C:\Qt\5.8\msvc2013_64\bin\rcc.exe \
 		MainForm.ui.qml \
+		copyright.PNG \
 		circle1.png \
 		KreuzBlau.png \
 		KreuzGelb.png \

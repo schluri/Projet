@@ -68,6 +68,8 @@ Item {
 
     Rectangle {
         id: recTopLeft
+        x: 0
+        y: 0
         width: 120
         height: 120
         anchors.top: parent.top
@@ -77,7 +79,7 @@ Item {
             y: 0
             width: 120
             height: 120
-            z: 0
+            z: -1
             hoverEnabled: true
         }
 
@@ -621,7 +623,7 @@ Item {
         y: 444
         width: 200
         height: 50
-        text: "Geiler Shit!"
+        text: "Yellow starts!"
         fontSizeMode: Text.FixedSize
         wrapMode: Text.NoWrap
         horizontalAlignment: Text.AlignHCenter
@@ -652,12 +654,17 @@ Item {
         x: 300
         y: 300
         width: 800
-        height: 300
+        height: 310
         title: qsTr("Rules")
 
         Image {
             id: rulesImage
-            anchors.fill: parent
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+            anchors.top: parent.top
+            anchors.topMargin: 0
             source: "rules.png"
         }
 
