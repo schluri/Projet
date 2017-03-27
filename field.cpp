@@ -165,6 +165,36 @@ void Field::resetGame()
     player = 1;
 }
 
+void Field::setReplaceBlue()
+{
+    if(replaceBlue == false){
+        replaceBlue = true;
+    }
+    else{
+        replaceBlue = false;
+    }
+}
+
+void Field::setReplaceYellow()
+{
+    if(replaceYellow == false){
+        replaceYellow = true;
+    }
+    else{
+        replaceYellow = false;
+    }
+}
+
+bool Field::showReplaceBlue()
+{
+    return replaceBlue;
+}
+
+bool Field::showReplaceYellow()
+{
+    return replaceYellow;
+}
+
 
 /*
 QString Field::readField()

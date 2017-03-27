@@ -6,5 +6,6 @@
         <file>circle2.png</file>
         <file>KreuzBlau.png</file>
         <file>KreuzGelb.png</file>
+        <file>rules.png</file>
     </qresource>
 </RCC>

@@ -24,6 +24,10 @@ public:
     Q_INVOKABLE void checkForWinner();
     Q_INVOKABLE void test();
     Q_INVOKABLE void resetGame();
+    Q_INVOKABLE bool showReplaceBlue();
+    Q_INVOKABLE bool showReplaceYellow();
+    Q_INVOKABLE void setReplaceBlue();
+    Q_INVOKABLE void setReplaceYellow();
 
         int player = 1;
 
@@ -51,7 +55,8 @@ private:
     int movesBlue = 0;
     int movesYellow = 0;
 
-
+    bool replaceBlue = false;
+    bool replaceYellow = false;
 
     int winner = 420;
 
