@@ -149,7 +149,8 @@ release\qrc_qml.cpp: qml.qrc \
 		KreuzBlau.png \
 		KreuzGelb.png \
 		main.qml \
-		circle2.png
+		circle2.png \
+		rules.png
 	C:\Qt\5.8\msvc2013_64\bin\rcc.exe -name qml qml.qrc -o release\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: release\moc_predefs.h
