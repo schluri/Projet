@@ -56,12 +56,12 @@ void Field::changePlayer()
      if (player == 0)
      {
          player = 1;
-        // qDebug() << "Yellow's turn!";
+         qDebug() << "Yellow's turn!";
      }
      else
      {
          player = 0;
-        // qDebug() << "Blue's turn!";
+         qDebug() << "Blue's turn!";
      }
 }
 
@@ -69,6 +69,11 @@ void Field::setField(int l, int c)
 {
     T[l][c] = player;
 
+}
+
+void Field::setFieldEmpty(int l, int c)
+{
+    T[l][c] = 420;
 }
 
 void Field::setPosition(int l, int c)
