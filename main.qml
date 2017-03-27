@@ -30,17 +30,19 @@ ApplicationWindow {
                           game.checkForWinner()
                           game.changePlayer()
                       }
-                      if(game.showMovesBlue() >= 3 && game.showField() == 0){
-                          picBlueTopLeft.visible = false
-                          game.setFieldEmpty(0,0)
-                      }
-                      if(game.showMovesBlue() >= 3 && game.showField() == 420){
-                          picBlueTopLeft.visible = true
-                          game.setField(0,0)
-                          game.upMoves()
-                          game.checkForWinner()
-                          game.changePlayer()
-                      }
+                      if(game.showMovesBlue() >= 3){
+                          if(game.showField() == 1){
+                              picBlueTopLeft.visible = false
+                              game.setFieldEmpty(0,0)
+                          }
+                          else if(game.showField() == 420){
+                              picBlueTopLeft.visible = true
+                              game.setField(0,0)
+                              game.upMoves()
+                              game.checkForWinner()
+                              game.changePlayer()
+                          }
+                     }
                   }
 
                   if(game.showPlayer()==1){
@@ -51,17 +53,19 @@ ApplicationWindow {
                           game.checkForWinner()
                           game.changePlayer()
                       }
-                      if(game.showMovesYellow() >= 3 && game.showField() == 1){
-                          picYellowTopLeft.visible = false
-                          game.setFieldEmpty(0,0)
-                      }
-                      if(game.showMovesYellow() >= 3 && game.showField() == 420){
-                          picYellowTopLeft.visible = true
-                          game.setField(0,0)
-                         // game.upMoves()
-                          game.checkForWinner()
-                          game.changePlayer()
-                      }
+                      if(game.showMovesYellow() >= 3){
+                          if(game.showField() == 1){
+                              picYellowTopLeft.visible = false
+                              game.setFieldEmpty(0,0)
+                          }
+                          else if(game.showField() == 420){
+                              picYellowTopLeft.visible = true
+                              game.setField(0,0)
+                              game.upMoves()
+                              game.checkForWinner()
+                              game.changePlayer()
+                          }
+                  }
                   }
 
 
@@ -641,5 +645,65 @@ ApplicationWindow {
               //info  {
               //    if(game.showPlayer()==0)
               //}
+
+
+              function changeTextField()
+                            {
+                                switch(game.showPlayer())
+                                {
+                                case 1:
+                                    if(game.showMovesYellow() < 3)
+
+                                    {
+                                        info.text = "Yellow's turn!"
+                                        break
+                                    }
+                                    else {info.text = "Stage 1 finished"}
+
+                                case 0:
+                                    if(game.showMovesBlue() < 3)
+
+                                    {
+                                        info.text = "Blue's turn!"
+                                        break
+                                    }
+                                    else {info.text = "Stage 1 finished"}
+
+                                }
+                            }
+
+                            function resetObjects()
+                            {
+                                picYellowTopLeft.visible = false
+                                picYellowTopMiddle.visible = false
+                                picYellowTopRight.visible = false
+                                picYellowLeft.visible = false
+                                picYellowCenter.visible = false
+                                picYellowRight.visible = false
+                                picYellowBottomLeft.visible = false
+                                picYellowBottomMiddle.visible = false
+                                picYellowBottomRight.visible = false
+
+                                picBlueTopLeft.visible = false
+                                picBlueTopMiddle.visible = false
+                                picBlueTopRight.visible = false
+                                picBlueLeft.visible = false
+                                picBlueCenter.visible = false
+                                picBlueRight.visible = false
+                                picBlueBottomLeft.visible = false
+                                picBlueBottomMiddle.visible = false
+                                picBlueBottomRight.visible = false
+
+                                pic1Player1.visible = true
+                                pic2Player1.visible = true
+                                pic3Player1.visible = true
+
+                                pic1Player2.visible = true
+                                pic2Player2.visible = true
+                                pic3Player2.visible = true
+
+                                info.text = "Yellow starts!"
+                            }
+
     }
 }
