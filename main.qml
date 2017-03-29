@@ -657,7 +657,7 @@ ApplicationWindow {
               }
               buttonReset.onClicked: {
 
-                  game.resetGame()      // resets all Game Variables
+                  game.resetGame()      //  resets all Game Variables
                   resetObjects()
               }
               buttonRules.onClicked: {
