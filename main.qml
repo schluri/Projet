@@ -662,8 +662,15 @@ ApplicationWindow {
               }
               buttonRules.onClicked: {
 
-                  rules.show()
-}
+                  if(rulesWindow.visible == true)
+                  {
+                      rulesWindow.visible = false
+                  }
+                  else
+                  {
+                      rulesWindow.visible = true
+                  }
+              }
 
               function changeTextField()
                             {
