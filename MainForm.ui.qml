@@ -7,9 +7,8 @@ Item {
     id: mainWindow
     width: 800
     height: 600
-    property alias rulesImage: rulesImage
-    property alias rulesWindow: rulesWindow
     property alias buttonRules: buttonRules
+    property alias rules: rules
     property alias recInfoBackground: recInfoBackground
     property alias info: info
     property alias pic1Player1: pic1Player1
@@ -68,8 +67,6 @@ Item {
 
     Rectangle {
         id: recTopLeft
-        x: 0
-        y: 0
         width: 120
         height: 120
         anchors.top: parent.top
@@ -79,7 +76,7 @@ Item {
             y: 0
             width: 120
             height: 120
-            z: -1
+            z: 0
             hoverEnabled: true
         }
 
@@ -623,7 +620,7 @@ Item {
         y: 444
         width: 200
         height: 50
-        text: "Yellow starts!"
+        text: "Geiler Shit!"
         fontSizeMode: Text.FixedSize
         wrapMode: Text.NoWrap
         horizontalAlignment: Text.AlignHCenter
@@ -639,35 +636,25 @@ Item {
             anchors.fill: parent
         }
     }
-    
+
+    Window {
+
+        id: rules
+        x: 250
+        y: 250
+
+        width: 300
+        height: 300
+        color: "#f41d1d"
+    }
+
     Button {
         id: buttonRules
         x: 185
         y: 444
         width: 100
         height: 50
-        text: qsTr("Show/Hide Rules")
-    }
-
-    Window {
-        id: rulesWindow
-        x: 300
-        y: 300
-        width: 800
-        height: 310
-        title: qsTr("Rules")
-
-        Image {
-            id: rulesImage
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.top: parent.top
-            anchors.topMargin: 0
-            source: "rules.png"
-        }
-
+        text: qsTr("Show Rules")
     }
 
 }

@@ -145,13 +145,11 @@ compiler_rcc_clean:
 debug\qrc_qml.cpp: qml.qrc \
 		C:\Qt\5.8\msvc2013_64\bin\rcc.exe \
 		MainForm.ui.qml \
-		copyright.PNG \
 		circle1.png \
 		KreuzBlau.png \
 		KreuzGelb.png \
 		main.qml \
-		circle2.png \
-		rules.png
+		circle2.png
 	C:\Qt\5.8\msvc2013_64\bin\rcc.exe -name qml qml.qrc -o debug\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: debug\moc_predefs.h
@@ -229,7 +227,7 @@ debug\moc_field.cpp: C:\Qt\5.8\msvc2013_64\include\QtCore\QObject \
 		field.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.8\msvc2013_64\bin\moc.exe
-	C:\Qt\5.8\msvc2013_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include debug/moc_predefs.h -IC:/Qt/5.8/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Bubi/Desktop/Projet-master/Projet-master -IC:/Qt/5.8/msvc2013_64/include -IC:/Qt/5.8/msvc2013_64/include/QtQuick -IC:/Qt/5.8/msvc2013_64/include/QtGui -IC:/Qt/5.8/msvc2013_64/include/QtANGLE -IC:/Qt/5.8/msvc2013_64/include/QtQml -IC:/Qt/5.8/msvc2013_64/include/QtNetwork -IC:/Qt/5.8/msvc2013_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" field.h -o debug\moc_field.cpp
+	C:\Qt\5.8\msvc2013_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include debug/moc_predefs.h -IC:/Qt/5.8/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Bubi/Desktop/Projet-fabi/Projet-fabi -IC:/Qt/5.8/msvc2013_64/include -IC:/Qt/5.8/msvc2013_64/include/QtQuick -IC:/Qt/5.8/msvc2013_64/include/QtGui -IC:/Qt/5.8/msvc2013_64/include/QtANGLE -IC:/Qt/5.8/msvc2013_64/include/QtQml -IC:/Qt/5.8/msvc2013_64/include/QtNetwork -IC:/Qt/5.8/msvc2013_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" field.h -o debug\moc_field.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
