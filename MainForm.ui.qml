@@ -7,9 +7,7 @@ Item {
     id: mainWindow
     width: 800
     height: 600
-    property alias rulesWindow: rulesWindow
     property alias buttonRules: buttonRules
-    property alias rules: rules
     property alias recInfoBackground: recInfoBackground
     property alias info: info
     property alias pic1Player1: pic1Player1
@@ -638,17 +636,6 @@ Item {
         }
     }
 
-    Window {
-
-        id: rules
-        x: 250
-        y: 250
-
-        width: 300
-        height: 300
-        color: "#f41d1d"
-    }
-
     Button {
         id: buttonRules
         x: 185
@@ -657,26 +644,4 @@ Item {
         height: 50
         text: qsTr("Show Rules")
     }
-
-    Window {
-        id: rulesWindow
-        x: 300
-        y: 300
-        width: 800
-        height: 310
-        title: qsTr("Rules")
-
-        Image {
-            id: rulesImage
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.top: parent.top
-            anchors.topMargin: 0
-            source: "rules.png"
-        }
-
-    }
-
 }
