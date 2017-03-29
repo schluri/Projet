@@ -3,4 +3,4 @@
 Leonhard Schuwerk
 Fabian Bauer
 
-Jeu de l'arginée
+Jeu de l'araignée
