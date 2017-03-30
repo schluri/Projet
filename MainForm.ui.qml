@@ -7,6 +7,7 @@ Item {
     id: mainWindow
     width: 800
     height: 600
+    property alias stageInfo: stageInfo
     property alias buttonWinnerReset: buttonWinnerReset
     property alias buttonWinnerQuit: buttonWinnerQuit
     property alias textWinner: textWinner
@@ -624,7 +625,7 @@ Item {
 
     Text {
         id: info
-        x: 514
+        x: 476
         y: 444
         width: 200
         height: 50
@@ -647,7 +648,7 @@ Item {
 
     Button {
         id: buttonRules
-        x: 350
+        x: 294
         y: 444
         width: 100
         height: 50
@@ -671,7 +672,7 @@ Item {
 
     Button {
         id: buttonQuit
-        x: 196
+        x: 167
         y: 444
         width: 100
         height: 50
@@ -722,5 +723,27 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
             z: 2
         }
+    }
+
+    Text {
+        id: stageInfo
+        x: 476
+        y: 395
+        width: 200
+        height: 50
+        text: "Stage 1"
+        Rectangle {
+            id: recInfoBackground1
+            color: "#ffffff"
+            z: -1
+            border.color: "#675858"
+            anchors.fill: parent
+        }
+        fontSizeMode: Text.FixedSize
+        font.family: "Verdana"
+        wrapMode: Text.NoWrap
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 22
     }
 }
