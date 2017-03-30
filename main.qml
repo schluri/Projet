@@ -768,27 +768,38 @@ ApplicationWindow {
               }
 
               function changeTextField(){
+
+                  if(game.checkForWinner() == 420)
+
+                             {
+                                if(game.showMovesBlue() >= 3 && game.showMovesYellow() >= 3)
+                                {
+                                    stageInfo.text = "Stage 2"
+                                }
+
                                 switch(game.showPlayer())
                                 {
                                 case 1:
-                                    if(game.showMovesYellow() < 3)
+                                    //if(game.showMovesYellow() < 3)
 
-                                    {
+                                   // {
                                         info.text = "Yellow's turn!"
                                         break
-                                    }
-                                    else {info.text = "Stage 1 finished"}
+                                   // }
 
                                 case 0:
-                                    if(game.showMovesBlue() < 3)
+                                   // if(game.showMovesBlue() < 3)
 
-                                    {
+                                   // {
                                         info.text = "Blue's turn!"
                                         break
-                                    }
-                                    else {info.text = "Stage 1 finished"}
-
+                                   // }
                                 }
+                             }
+                  else
+                  {info.visible = false
+                   stageInfo.visible = false
+                    }
                             }
               function resetObjects(){
                                 picYellowTopLeft.visible = false
@@ -819,9 +830,22 @@ ApplicationWindow {
                                 pic2Player2.visible = true
                                 pic3Player2.visible = true
 
+                              recTopLeft.color = "white"
+                              recTopMiddle.color = "white"
+                              recTopRight.color = "white"
+                              recLeft.color = "white"
+                              recRight.color = "white"
+                              recCenter.color = "white"
+                              recBottomRight.color = "white"
+                              recBottomLeft.color = "white"
+                              recBottomMiddle.color = "white"
+
                                 winnerWindow.visible = false
 
                                 info.text = "Yellow starts!"
+                                info.visible = true
+                                stageInfo.text = "Stage 1"
+                                stageInfo.visible = true
                             }
               function updateRemainingTokensYellow(){
                   switch(game.showMovesYellow())
