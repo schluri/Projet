@@ -7,6 +7,8 @@ Item {
     id: mainWindow
     width: 800
     height: 600
+    property alias buttonWinnerReset: buttonWinnerReset
+    property alias buttonWinnerQuit: buttonWinnerQuit
     property alias textWinner: textWinner
     property alias winnerWindow: winnerWindow
     property alias buttonQuit: buttonQuit
@@ -650,6 +652,7 @@ Item {
         width: 100
         height: 50
         text: qsTr("Show/Hide Rules")
+        z: 2
     }
 
     Window {
@@ -677,17 +680,47 @@ Item {
 
     Window {
         id: winnerWindow
-        x: 200
+        x: 300
         y: 150
-        width: 200
+        width: 300
         height: 200
 
         Text {
             id: textWinner
             text: qsTr("eDoodle")
+            anchors.top: parent.top
+            anchors.topMargin: 50
+            anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
-            anchors.fill: parent
             font.pixelSize: 20
+        }
+
+        Button {
+            id: buttonWinnerQuit
+            x: 196
+            y: 444
+            width: 100
+            height: 50
+            text: qsTr("End Game")
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 20
+            anchors.horizontalCenterOffset: 65
+            anchors.horizontalCenter: parent.horizontalCenter
+            z: 1
+        }
+
+        Button {
+            id: buttonWinnerReset
+            x: 42
+            y: 444
+            width: 100
+            height: 50
+            text: qsTr("Reset Game")
+            anchors.horizontalCenterOffset: -65
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 20
+            anchors.horizontalCenter: parent.horizontalCenter
+            z: 2
         }
     }
 }

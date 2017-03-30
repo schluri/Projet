@@ -14,40 +14,40 @@ ApplicationWindow {
               anchors.fill: parent
               id: mainWindow
 
-
-
               anchors.bottomMargin: 0
               anchors.leftMargin: 0
 
               maTopLeft {
                   onClicked:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
+                          game.setPosition(0,0)
 
-                  game.setPosition(0,0)
-
-                      if(game.showPlayer() == 0){
-                          if(game.showMovesBlue() < 3 && game.showField() == 420){
-                              picBlueTopLeft.visible = true
-                              game.setField(0,0)
-                              game.upMoves()
-                              checkForWinner()
-                              game.changePlayer()
-                          }
-                          else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
-                                  picBlueTopLeft.visible = false
-                                  game.setFieldEmpty(0,0)
-                                  game.setReplaceBlue()
-                              }
-                              else if(game.showField() == 420 && game.showReplaceBlue() == true){
+                          if(game.showPlayer() == 0){
+                              if(game.showMovesBlue() < 3 && game.showField() == 420){
                                   picBlueTopLeft.visible = true
                                   game.setField(0,0)
                                   game.upMoves()
                                   checkForWinner()
                                   game.changePlayer()
-                                  game.setReplaceBlue()
                               }
-                         }
+                              else if(game.showMovesBlue() >= 3){
+                                  if(game.showField() == 0){
+                                      picBlueTopLeft.visible = false
+                                      game.setFieldEmpty(0,0)
+                                      game.setReplaceBlue()
+                                  }
+                                  else if(game.showField() == 420 && game.showReplaceBlue() == true){
+                                      picBlueTopLeft.visible = true
+                                      game.setField(0,0)
+                                      game.upMoves()
+                                      checkForWinner()
+                                      game.changePlayer()
+                                      game.setReplaceBlue()
+                                  }
+                             }
+                          }
                       }
 
                       if(game.showPlayer()==1){
@@ -73,168 +73,195 @@ ApplicationWindow {
                                   game.setReplaceYellow()
                               }
                          }
-                      }
+
 
                   updateRemainingTokensBlue()
                   updateRemainingTokensYellow()
                   changeTextField()
 
+                    }
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recTopLeft.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recTopLeft.color = "white"
+                      }
                   }
               }
               maTopMiddle {
                   onClicked: {
 
-                  game.setPosition(0,1)
+                      if(game.checkForWinner() == 420)
+                      {
 
-                      if(game.showPlayer() == 0){
-                          if(game.showMovesBlue() < 3 && game.showField() == 420){
-                              picBlueTopMiddle.visible = true
-                              game.setField(0,1)
-                              game.upMoves()
-                              checkForWinner()
-                              game.changePlayer()
-                          }
-                          else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
-                                  picBlueTopMiddle.visible = false
-                                  game.setFieldEmpty(0,1)
-                                  game.setReplaceBlue()
-                              }
-                              else if(game.showField() == 420 && game.showReplaceBlue() == true){
+                      game.setPosition(0,1)
+
+                          if(game.showPlayer() == 0){
+                              if(game.showMovesBlue() < 3 && game.showField() == 420){
                                   picBlueTopMiddle.visible = true
                                   game.setField(0,1)
                                   game.upMoves()
                                   checkForWinner()
                                   game.changePlayer()
-                                  game.setReplaceBlue()
                               }
-                         }
-                      }
-
-                      if(game.showPlayer()==1){
-                          if(game.showMovesYellow() < 3 && game.showField() == 420){
-                              picYellowTopMiddle.visible = true
-                              game.setField(0,1)
-                              game.upMoves()
-                              checkForWinner()
-                              game.changePlayer()
+                              else if(game.showMovesBlue() >= 3){
+                                  if(game.showField() == 0){
+                                      picBlueTopMiddle.visible = false
+                                      game.setFieldEmpty(0,1)
+                                      game.setReplaceBlue()
+                                  }
+                                  else if(game.showField() == 420 && game.showReplaceBlue() == true){
+                                      picBlueTopMiddle.visible = true
+                                      game.setField(0,1)
+                                      game.upMoves()
+                                      checkForWinner()
+                                      game.changePlayer()
+                                      game.setReplaceBlue()
+                                  }
+                             }
                           }
-                          else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
-                                  picYellowTopMiddle.visible = false
-                                  game.setFieldEmpty(0,1)
-                                  game.setReplaceYellow()
-                              }
-                              else if(game.showField() == 420 && game.showReplaceYellow() == true){
+
+                          if(game.showPlayer()==1){
+                              if(game.showMovesYellow() < 3 && game.showField() == 420){
                                   picYellowTopMiddle.visible = true
                                   game.setField(0,1)
                                   game.upMoves()
                                   checkForWinner()
                                   game.changePlayer()
-                                  game.setReplaceYellow()
                               }
-                      }
-                      }
-
-
+                              else if(game.showMovesYellow() >= 3){
+                                  if(game.showField() == 1){
+                                      picYellowTopMiddle.visible = false
+                                      game.setFieldEmpty(0,1)
+                                      game.setReplaceYellow()
+                                  }
+                                  else if(game.showField() == 420 && game.showReplaceYellow() == true){
+                                      picYellowTopMiddle.visible = true
+                                      game.setField(0,1)
+                                      game.upMoves()
+                                      checkForWinner()
+                                      game.changePlayer()
+                                      game.setReplaceYellow()
+                                  }
+                          }
+                          }
 
                       updateRemainingTokensBlue()
                       updateRemainingTokensYellow()
                       changeTextField()
 
+                    }
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recTopMiddle.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recTopMiddle.color = "white"
+                      }
                   }
               }
               maTopRight {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
+                          game.setPosition(0,2)
 
-                  game.setPosition(0,2)
+                              if(game.showPlayer() == 0){
+                                  if(game.showMovesBlue() < 3 && game.showField() == 420){
+                                      picBlueTopRight.visible = true
+                                      game.setField(0,2)
+                                      game.upMoves()
+                                      checkForWinner()
+                                      game.changePlayer()
+                                  }
+                                  else if(game.showMovesBlue() >= 3){
+                                      if(game.showField() == 0){
+                                          picBlueTopRight.visible = false
+                                          game.setFieldEmpty(0,2)
+                                          game.setReplaceBlue()
+                                      }
+                                      else if(game.showField() == 420 && game.showReplaceBlue() == true){
+                                          picBlueTopRight.visible = true
+                                          game.setField(0,2)
+                                          game.upMoves()
+                                          checkForWinner()
+                                          game.changePlayer()
+                                          game.setReplaceBlue()
+                                      }
+                                 }
+                              }
 
-                      if(game.showPlayer() == 0){
-                          if(game.showMovesBlue() < 3 && game.showField() == 420){
-                              picBlueTopRight.visible = true
-                              game.setField(0,2)
-                              game.upMoves()
-                              checkForWinner()
-                              game.changePlayer()
-                          }
-                          else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
-                                  picBlueTopRight.visible = false
-                                  game.setFieldEmpty(0,2)
-                                  game.setReplaceBlue()
+                              if(game.showPlayer()==1){
+                                  if(game.showMovesYellow() < 3 && game.showField() == 420){
+                                      picYellowTopRight.visible = true
+                                      game.setField(0,2)
+                                      game.upMoves()
+                                      checkForWinner()
+                                      game.changePlayer()
+                                  }
+                                  else if(game.showMovesYellow() >= 3){
+                                      if(game.showField() == 1){
+                                          picYellowTopRight.visible = false
+                                          game.setFieldEmpty(0,2)
+                                          game.setReplaceYellow()
+                                      }
+                                      else if(game.showField() == 420 && game.showReplaceYellow() == true){
+                                          picYellowTopRight.visible = true
+                                          game.setField(0,2)
+                                          game.upMoves()
+                                          checkForWinner()
+                                          game.changePlayer()
+                                          game.setReplaceYellow()
+                                      }
                               }
-                              else if(game.showField() == 420 && game.showReplaceBlue() == true){
-                                  picBlueTopRight.visible = true
-                                  game.setField(0,2)
-                                  game.upMoves()
-                                  checkForWinner()
-                                  game.changePlayer()
-                                  game.setReplaceBlue()
                               }
-                         }
+
+
+                              updateRemainingTokensBlue()
+                              updateRemainingTokensYellow()
+                              changeTextField()
                       }
 
-                      if(game.showPlayer()==1){
-                          if(game.showMovesYellow() < 3 && game.showField() == 420){
-                              picYellowTopRight.visible = true
-                              game.setField(0,2)
-                              game.upMoves()
-                              checkForWinner()
-                              game.changePlayer()
-                          }
-                          else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
-                                  picYellowTopRight.visible = false
-                                  game.setFieldEmpty(0,2)
-                                  game.setReplaceYellow()
-                              }
-                              else if(game.showField() == 420 && game.showReplaceYellow() == true){
-                                  picYellowTopRight.visible = true
-                                  game.setField(0,2)
-                                  game.upMoves()
-                                  checkForWinner()
-                                  game.changePlayer()
-                                  game.setReplaceYellow()
-                              }
-                      }
-                      }
 
-
-                      updateRemainingTokensBlue()
-                      updateRemainingTokensYellow()
-                      changeTextField()
 
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recTopRight.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
-                      recTopRight.color = "white"
+                      if(game.checkForWinner() == 420)
+                          {
+                          recTopRight.color = "white"
+                          }
                   }
               }
               maLeft {
                     onClicked: {
+                        if(game.checkForWinner() == 420)
+                        {
 
                     game.setPosition(1,0)
 
@@ -294,18 +321,28 @@ ApplicationWindow {
                         changeTextField()
 
                     }
+                    }
+
                     onEntered:
                     {
+                        if(game.checkForWinner() == 420)
+                        {
                         recLeft.color = "lightgreen"
+                        }
                     }
                     onExited:
 
                     {
+                        if(game.checkForWinner() == 420)
+                        {
                         recLeft.color = "white"
+                        }
                     }
               }
               maCenter {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
 
                   game.setPosition(1,1)
 
@@ -364,19 +401,29 @@ ApplicationWindow {
                       updateRemainingTokensYellow()
                       changeTextField()
 
+                      }
+
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recCenter.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recCenter.color = "white"
+                      }
                   }
               }
               maRight {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
 
                   game.setPosition(1,2)
 
@@ -434,19 +481,29 @@ ApplicationWindow {
                       updateRemainingTokensYellow()
                       changeTextField()
 
+                      }
+
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recRight.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recRight.color = "white"
+                      }
                   }
               }
               maBottomLeft {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
 
                   game.setPosition(2,0)
 
@@ -503,20 +560,29 @@ ApplicationWindow {
                       updateRemainingTokensBlue()
                       updateRemainingTokensYellow()
                       changeTextField()
+                      }
 
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recBottomLeft.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                          if(game.checkForWinner() == 420)
+                          {
                       recBottomLeft.color = "white"
+                          }
                   }
               }
               maBottomMiddle {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
 
                   game.setPosition(2,1)
 
@@ -574,19 +640,29 @@ ApplicationWindow {
                       updateRemainingTokensYellow()
                       changeTextField()
 
+                      }
+
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recBottomMiddle.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recBottomMiddle.color = "white"
+                      }
                   }
               }
               maBottomRight {
                   onClicked: {
+                      if(game.checkForWinner() == 420)
+                      {
 
                   game.setPosition(2,2)
 
@@ -645,15 +721,23 @@ ApplicationWindow {
                       updateRemainingTokensYellow()
                       changeTextField()
 
+                      }
+
                   }
                   onEntered:
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recBottomRight.color = "lightgreen"
+                      }
                   }
                   onExited:
 
                   {
+                      if(game.checkForWinner() == 420)
+                      {
                       recBottomRight.color = "white"
+                      }
                   }
               }
               buttonReset.onClicked: {
@@ -674,6 +758,13 @@ ApplicationWindow {
               }
               buttonQuit.onClicked: {
                   Qt.quit()
+              }
+              buttonWinnerQuit.onClicked: {
+                  Qt.quit()
+              }
+              buttonWinnerReset.onClicked: {
+                  game.resetGame()      //  resets all Game Variables
+                  resetObjects()
               }
 
               function changeTextField(){
@@ -728,6 +819,8 @@ ApplicationWindow {
                                 pic2Player2.visible = true
                                 pic3Player2.visible = true
 
+                                winnerWindow.visible = false
+
                                 info.text = "Yellow starts!"
                             }
               function updateRemainingTokensYellow(){
@@ -761,10 +854,12 @@ ApplicationWindow {
               function checkForWinner(){
                   if(game.checkForWinner() == 0){
                       textWinner.text = "Blue wins"
+                      winnerWindow.color = "blue"
                       winnerWindow.visible = true
                   }
                   if(game.checkForWinner() == 1){
                       textWinner.text = "Yellow wins"
+                      winnerWindow.color = "yellow"
                       winnerWindow.visible = true
                   }
               }

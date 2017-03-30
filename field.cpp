@@ -106,20 +106,28 @@ int Field::checkForWinner()
     for (int i=0;i<3;i++)
     {
         if(T[i][0] == 0 && T[i][1] == 0 && T[i][2] == 0)    // Check all 3 ligns
-        {return 0;}
+        {
+            winner = 0;
+            return winner;}
     }
 
     for (int i=0;i<3;i++)
     {
         if(T[0][i] == 0 && T[1][i] == 0 && T[2][i] == 0)    // Check all 3 columns
-        {return 0;}
+        {
+            winner = 0;
+            return winner;}
     }
 
     if(T[0][0] == 0 && T[1][1] == 0 && T[2][2] == 0)        // Check 1. Diagonal
-        {return 0;}
+    {
+        winner = 0;
+        return winner;}
 
     if(T[2][0] == 0 && T[1][1] == 0 && T[0][2] == 0)        // Check 2. Diagonal
-        {return 0;}
+    {
+        winner = 0;
+        return winner;}
 
 
 //----------------------------------------------------------------------check if Yellow is winner
@@ -128,20 +136,32 @@ int Field::checkForWinner()
     for (int i=0;i<3;i++)
     {
         if(T[i][0] == 1 && T[i][1] == 1 && T[i][2] == 1)    // Check all 3 ligns
-        {return 1;}
+        {
+            winner = 1;
+            return winner;}
     }
 
     for (int i=0;i<3;i++)
     {
         if(T[0][i] == 1 && T[1][i] == 1 && T[2][i] == 1)    // Check all 3 columns
-        {return 1;}
+        {
+            winner = 1;
+            return winner;}
     }
 
     if(T[0][0] == 1 && T[1][1] == 1 && T[2][2] == 1)        // Check 1. Diagonal
-        {return 1;}
+    {
+        winner = 1;
+        return winner;}
 
     if(T[2][0] == 1 && T[1][1] == 1 && T[0][2] == 1)        // Check 2. Diagonal
-    {return 1;}
+    {
+        winner = 1;
+        return winner;}
+
+
+    else
+        {return 420;}
 }
 
 void Field::test()
