@@ -21,7 +21,7 @@ public:
     Q_INVOKABLE void upMoves();
     Q_INVOKABLE int showMovesBlue();
     Q_INVOKABLE int showMovesYellow();
-    Q_INVOKABLE void checkForWinner();
+    Q_INVOKABLE int checkForWinner();
     Q_INVOKABLE void test();
     Q_INVOKABLE void resetGame();
     Q_INVOKABLE bool showReplaceBlue();

@@ -15,6 +15,7 @@ ApplicationWindow {
               id: mainWindow
 
 
+
               anchors.bottomMargin: 0
               anchors.leftMargin: 0
 
@@ -29,7 +30,7 @@ ApplicationWindow {
                               picBlueTopLeft.visible = true
                               game.setField(0,0)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -42,7 +43,7 @@ ApplicationWindow {
                                   picBlueTopLeft.visible = true
                                   game.setField(0,0)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -54,7 +55,7 @@ ApplicationWindow {
                               picYellowTopLeft.visible = true
                               game.setField(0,0)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -67,7 +68,7 @@ ApplicationWindow {
                                   picYellowTopLeft.visible = true
                                   game.setField(0,0)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -99,7 +100,7 @@ ApplicationWindow {
                               picBlueTopMiddle.visible = true
                               game.setField(0,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -112,7 +113,7 @@ ApplicationWindow {
                                   picBlueTopMiddle.visible = true
                                   game.setField(0,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -124,7 +125,7 @@ ApplicationWindow {
                               picYellowTopMiddle.visible = true
                               game.setField(0,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -137,7 +138,7 @@ ApplicationWindow {
                                   picYellowTopMiddle.visible = true
                                   game.setField(0,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -171,7 +172,7 @@ ApplicationWindow {
                               picBlueTopRight.visible = true
                               game.setField(0,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -184,7 +185,7 @@ ApplicationWindow {
                                   picBlueTopRight.visible = true
                                   game.setField(0,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -196,7 +197,7 @@ ApplicationWindow {
                               picYellowTopRight.visible = true
                               game.setField(0,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -209,7 +210,7 @@ ApplicationWindow {
                                   picYellowTopRight.visible = true
                                   game.setField(0,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -242,7 +243,7 @@ ApplicationWindow {
                                 picBlueLeft.visible = true
                                 game.setField(1,0)
                                 game.upMoves()
-                                game.checkForWinner()
+                                checkForWinner()
                                 game.changePlayer()
                             }
                             else if(game.showMovesBlue() >= 3){
@@ -255,7 +256,7 @@ ApplicationWindow {
                                     picBlueLeft.visible = true
                                     game.setField(1,0)
                                     game.upMoves()
-                                    game.checkForWinner()
+                                    checkForWinner()
                                     game.changePlayer()
                                     game.setReplaceBlue()
                                 }
@@ -267,7 +268,7 @@ ApplicationWindow {
                                 picYellowLeft.visible = true
                                 game.setField(1,0)
                                 game.upMoves()
-                                game.checkForWinner()
+                                checkForWinner()
                                 game.changePlayer()
                             }
                             else if(game.showMovesYellow() >= 3){
@@ -280,7 +281,7 @@ ApplicationWindow {
                                     picYellowLeft.visible = true
                                     game.setField(1,0)
                                     game.upMoves()
-                                    game.checkForWinner()
+                                    checkForWinner()
                                     game.changePlayer()
                                     game.setReplaceYellow()
                                 }
@@ -313,7 +314,7 @@ ApplicationWindow {
                               picBlueCenter.visible = true
                               game.setField(1,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -326,7 +327,7 @@ ApplicationWindow {
                                   picBlueCenter.visible = true
                                   game.setField(1,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -338,7 +339,7 @@ ApplicationWindow {
                               picYellowCenter.visible = true
                               game.setField(1,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -351,7 +352,7 @@ ApplicationWindow {
                                   picYellowCenter.visible = true
                                   game.setField(1,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -384,7 +385,7 @@ ApplicationWindow {
                               picBlueRight.visible = true
                               game.setField(1,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -397,7 +398,7 @@ ApplicationWindow {
                                   picBlueRight.visible = true
                                   game.setField(1,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -409,7 +410,7 @@ ApplicationWindow {
                               picYellowRight.visible = true
                               game.setField(1,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -422,7 +423,7 @@ ApplicationWindow {
                                   picYellowRight.visible = true
                                   game.setField(1,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -454,7 +455,7 @@ ApplicationWindow {
                               picBlueBottomLeft.visible = true
                               game.setField(2,0)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -467,7 +468,7 @@ ApplicationWindow {
                                   picBlueBottomLeft.visible = true
                                   game.setField(2,0)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -479,7 +480,7 @@ ApplicationWindow {
                               picYellowBottomLeft.visible = true
                               game.setField(2,0)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -492,7 +493,7 @@ ApplicationWindow {
                                   picYellowBottomLeft.visible = true
                                   game.setField(2,0)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -524,7 +525,7 @@ ApplicationWindow {
                               picBlueBottomMiddle.visible = true
                               game.setField(2,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -537,7 +538,7 @@ ApplicationWindow {
                                   picBlueBottomMiddle.visible = true
                                   game.setField(2,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -549,7 +550,7 @@ ApplicationWindow {
                               picYellowBottomMiddle.visible = true
                               game.setField(2,1)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -562,7 +563,7 @@ ApplicationWindow {
                                   picYellowBottomMiddle.visible = true
                                   game.setField(2,1)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -594,7 +595,7 @@ ApplicationWindow {
                               picBlueBottomRight.visible = true
                               game.setField(2,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
@@ -607,7 +608,7 @@ ApplicationWindow {
                                   picBlueBottomRight.visible = true
                                   game.setField(2,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceBlue()
                               }
@@ -619,7 +620,7 @@ ApplicationWindow {
                               picYellowBottomRight.visible = true
                               game.setField(2,2)
                               game.upMoves()
-                              game.checkForWinner()
+                              checkForWinner()
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
@@ -632,7 +633,7 @@ ApplicationWindow {
                                   picYellowBottomRight.visible = true
                                   game.setField(2,2)
                                   game.upMoves()
-                                  game.checkForWinner()
+                                  checkForWinner()
                                   game.changePlayer()
                                   game.setReplaceYellow()
                               }
@@ -671,9 +672,11 @@ ApplicationWindow {
                       rulesWindow.visible = true
                   }
               }
+              buttonQuit.onClicked: {
+                  Qt.quit()
+              }
 
-              function changeTextField()
-                            {
+              function changeTextField(){
                                 switch(game.showPlayer())
                                 {
                                 case 1:
@@ -696,9 +699,7 @@ ApplicationWindow {
 
                                 }
                             }
-
-              function resetObjects()
-                            {
+              function resetObjects(){
                                 picYellowTopLeft.visible = false
                                 picYellowTopMiddle.visible = false
                                 picYellowTopRight.visible = false
@@ -729,9 +730,7 @@ ApplicationWindow {
 
                                 info.text = "Yellow starts!"
                             }
-
-              function updateRemainingTokensYellow()
-                            {
+              function updateRemainingTokensYellow(){
                   switch(game.showMovesYellow())
                   {
                   case 1:
@@ -745,9 +744,7 @@ ApplicationWindow {
                       break
                   }
               }
-
-              function updateRemainingTokensBlue()
-                            {
+              function updateRemainingTokensBlue(){
                   switch(game.showMovesBlue())
                       {
                       case 1:
@@ -761,6 +758,17 @@ ApplicationWindow {
                           break
                   }
               }
+              function checkForWinner(){
+                  if(game.checkForWinner() == 0){
+                      textWinner.text = "Blue wins"
+                      winnerWindow.visible = true
+                  }
+                  if(game.checkForWinner() == 1){
+                      textWinner.text = "Yellow wins"
+                      winnerWindow.visible = true
+                  }
+              }
+
 
     }
 }

@@ -211,6 +211,7 @@ Makefile: JeuDeLarginee_neu.pro C:\Qt\5.8\msvc2013_64\mkspecs\win32-msvc2013\qma
 		C:\Qt\5.8\msvc2013_64\mkspecs\features\qt_config.prf \
 		C:\Qt\5.8\msvc2013_64\mkspecs\win32-msvc2013\qmake.conf \
 		C:\Qt\5.8\msvc2013_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		C:\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds.prf \
 		C:\Qt\5.8\msvc2013_64\mkspecs\features\toolchain.prf \
 		C:\Qt\5.8\msvc2013_64\mkspecs\features\default_pre.prf \
@@ -379,6 +380,7 @@ C:\Qt\5.8\msvc2013_64\mkspecs\features\qt_functions.prf:
 C:\Qt\5.8\msvc2013_64\mkspecs\features\qt_config.prf:
 C:\Qt\5.8\msvc2013_64\mkspecs\win32-msvc2013\qmake.conf:
 C:\Qt\5.8\msvc2013_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 C:\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds.prf:
 C:\Qt\5.8\msvc2013_64\mkspecs\features\toolchain.prf:
 C:\Qt\5.8\msvc2013_64\mkspecs\features\default_pre.prf:

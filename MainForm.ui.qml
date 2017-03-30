@@ -7,6 +7,11 @@ Item {
     id: mainWindow
     width: 800
     height: 600
+    property alias textWinner: textWinner
+    property alias winnerWindow: winnerWindow
+    property alias buttonQuit: buttonQuit
+    property alias image: image
+    property alias rulesWindow: rulesWindow
     property alias buttonRules: buttonRules
     property alias recInfoBackground: recInfoBackground
     property alias info: info
@@ -68,6 +73,8 @@ Item {
         id: recTopLeft
         width: 120
         height: 120
+        border.color: "#090808"
+        z: 1
         anchors.top: parent.top
         MouseArea {
             id: maTopLeft
@@ -638,10 +645,49 @@ Item {
 
     Button {
         id: buttonRules
-        x: 185
+        x: 350
         y: 444
         width: 100
         height: 50
-        text: qsTr("Show Rules")
+        text: qsTr("Show/Hide Rules")
+    }
+
+    Window {
+        id: rulesWindow
+        x: 200
+        y: 150
+        width: 700
+        height: 250
+
+        Image {
+            id: image
+            anchors.fill: parent
+            source: "rules.png"
+        }
+    }
+
+    Button {
+        id: buttonQuit
+        x: 196
+        y: 444
+        width: 100
+        height: 50
+        text: qsTr("End Game")
+    }
+
+    Window {
+        id: winnerWindow
+        x: 200
+        y: 150
+        width: 200
+        height: 200
+
+        Text {
+            id: textWinner
+            text: qsTr("eDoodle")
+            horizontalAlignment: Text.AlignHCenter
+            anchors.fill: parent
+            font.pixelSize: 20
+        }
     }
 }
