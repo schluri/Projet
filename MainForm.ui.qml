@@ -628,7 +628,7 @@ Item {
         y: 444
         width: 200
         height: 50
-        text: "Geiler Shit!"
+        text: "Yellow starts!"
         fontSizeMode: Text.FixedSize
         wrapMode: Text.NoWrap
         horizontalAlignment: Text.AlignHCenter
