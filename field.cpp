@@ -100,26 +100,26 @@ int Field::showMovesYellow()
     return movesYellow;
 }
 
-void Field::checkForWinner()
+int Field::checkForWinner()
 {
 //----------------------------------------------------------------------check if Blue is winner
     for (int i=0;i<3;i++)
     {
         if(T[i][0] == 0 && T[i][1] == 0 && T[i][2] == 0)    // Check all 3 ligns
-        {qDebug() << "Blue wins ! ! !";}
+        {return 0;}
     }
 
     for (int i=0;i<3;i++)
     {
         if(T[0][i] == 0 && T[1][i] == 0 && T[2][i] == 0)    // Check all 3 columns
-        {qDebug() << "Blue wins ! ! !";}
+        {return 0;}
     }
 
     if(T[0][0] == 0 && T[1][1] == 0 && T[2][2] == 0)        // Check 1. Diagonal
-        {qDebug() << "Blue wins ! ! !";}
+        {return 0;}
 
     if(T[2][0] == 0 && T[1][1] == 0 && T[0][2] == 0)        // Check 2. Diagonal
-        {qDebug() << "Blue wins ! ! !";}
+        {return 0;}
 
 
 //----------------------------------------------------------------------check if Yellow is winner
@@ -128,20 +128,20 @@ void Field::checkForWinner()
     for (int i=0;i<3;i++)
     {
         if(T[i][0] == 1 && T[i][1] == 1 && T[i][2] == 1)    // Check all 3 ligns
-        {qDebug() << "Yellow wins ! ! !";}
+        {return 1;}
     }
 
     for (int i=0;i<3;i++)
     {
         if(T[0][i] == 1 && T[1][i] == 1 && T[2][i] == 1)    // Check all 3 columns
-        {qDebug() << "Yellow wins ! ! !";}
+        {return 1;}
     }
 
     if(T[0][0] == 1 && T[1][1] == 1 && T[2][2] == 1)        // Check 1. Diagonal
-        {qDebug() << "Yellow wins ! ! !";}
+        {return 1;}
 
     if(T[2][0] == 1 && T[1][1] == 1 && T[0][2] == 1)        // Check 2. Diagonal
-    {qDebug() << "Yellow wins ! ! !";}
+    {return 1;}
 }
 
 void Field::test()
