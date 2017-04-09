@@ -33,7 +33,7 @@ ApplicationWindow {
                                   game.changePlayer()
                               }
                               else if(game.showMovesBlue() >= 3){
-                                  if(game.showField() == 0){
+                                  if(game.showField() == 0 && game.showReplaceBlue() == false){
                                       picBlueTopLeft.visible = false
                                       game.setFieldEmpty(0,0)
                                       game.setReplaceBlue()
@@ -59,7 +59,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowTopLeft.visible = false
                                   game.setFieldEmpty(0,0)
                                   game.setReplaceYellow()
@@ -114,7 +114,7 @@ ApplicationWindow {
                                   game.changePlayer()
                               }
                               else if(game.showMovesBlue() >= 3){
-                                  if(game.showField() == 0){
+                                  if(game.showField() == 0 && game.showReplaceBlue() == false){
                                       picBlueTopMiddle.visible = false
                                       game.setFieldEmpty(0,1)
                                       game.setReplaceBlue()
@@ -139,7 +139,7 @@ ApplicationWindow {
                                   game.changePlayer()
                               }
                               else if(game.showMovesYellow() >= 3){
-                                  if(game.showField() == 1){
+                                  if(game.showField() == 1 && game.showReplaceYellow() == false){
                                       picYellowTopMiddle.visible = false
                                       game.setFieldEmpty(0,1)
                                       game.setReplaceYellow()
@@ -192,7 +192,7 @@ ApplicationWindow {
                                       game.changePlayer()
                                   }
                                   else if(game.showMovesBlue() >= 3){
-                                      if(game.showField() == 0){
+                                      if(game.showField() == 0 && game.showReplaceBlue() == false){
                                           picBlueTopRight.visible = false
                                           game.setFieldEmpty(0,2)
                                           game.setReplaceBlue()
@@ -217,7 +217,7 @@ ApplicationWindow {
                                       game.changePlayer()
                                   }
                                   else if(game.showMovesYellow() >= 3){
-                                      if(game.showField() == 1){
+                                      if(game.showField() == 1 && game.showReplaceYellow() == false){
                                           picYellowTopRight.visible = false
                                           game.setFieldEmpty(0,2)
                                           game.setReplaceYellow()
@@ -274,7 +274,7 @@ ApplicationWindow {
                                 game.changePlayer()
                             }
                             else if(game.showMovesBlue() >= 3){
-                                if(game.showField() == 0){
+                                if(game.showField() == 0 && game.showReplaceBlue() == false){
                                     picBlueLeft.visible = false
                                     game.setFieldEmpty(1,0)
                                     game.setReplaceBlue()
@@ -299,7 +299,7 @@ ApplicationWindow {
                                 game.changePlayer()
                             }
                             else if(game.showMovesYellow() >= 3){
-                                if(game.showField() == 1){
+                                if(game.showField() == 1 && game.showReplaceYellow() == false){
                                     picYellowLeft.visible = false
                                     game.setFieldEmpty(1,0)
                                     game.setReplaceYellow()
@@ -355,7 +355,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
+                              if(game.showField() == 0 && game.showReplaceBlue() == false){
                                   picBlueCenter.visible = false
                                   game.setFieldEmpty(1,1)
                                   game.setReplaceBlue()
@@ -380,7 +380,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowCenter.visible = false
                                   game.setFieldEmpty(1,1)
                                   game.setReplaceYellow()
@@ -436,7 +436,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
+                              if(game.showField() == 0 && game.showReplaceBlue() == false){
                                   picBlueRight.visible = false
                                   game.setFieldEmpty(1,2)
                                   game.setReplaceBlue()
@@ -461,7 +461,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowRight.visible = false
                                   game.setFieldEmpty(1,2)
                                   game.setReplaceYellow()
@@ -516,7 +516,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
+                              if(game.showField() == 0 && game.showReplaceBlue() == false){
                                   picBlueBottomLeft.visible = false
                                   game.setFieldEmpty(2,0)
                                   game.setReplaceBlue()
@@ -541,7 +541,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowBottomLeft.visible = false
                                   game.setFieldEmpty(2,0)
                                   game.setReplaceYellow()
@@ -595,7 +595,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
+                              if(game.showField() == 0 && game.showReplaceBlue() == false){
                                   picBlueBottomMiddle.visible = false
                                   game.setFieldEmpty(2,1)
                                   game.setReplaceBlue()
@@ -620,7 +620,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowBottomMiddle.visible = false
                                   game.setFieldEmpty(2,1)
                                   game.setReplaceYellow()
@@ -675,7 +675,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesBlue() >= 3){
-                              if(game.showField() == 0){
+                              if(game.showField() == 0 && game.showReplaceBlue() == false){
                                   picBlueBottomRight.visible = false
                                   game.setFieldEmpty(2,2)
                                   game.setReplaceBlue()
@@ -700,7 +700,7 @@ ApplicationWindow {
                               game.changePlayer()
                           }
                           else if(game.showMovesYellow() >= 3){
-                              if(game.showField() == 1){
+                              if(game.showField() == 1 && game.showReplaceYellow() == false){
                                   picYellowBottomRight.visible = false
                                   game.setFieldEmpty(2,2)
                                   game.setReplaceYellow()
