@@ -12,14 +12,14 @@ Field::Field(QObject *parent) : QObject(parent)
     Init();
 }
 
-/*
+
 Field::~Field(){
     if (T != NULL) {
         Free();
         T = NULL;
     }
 }
-*/
+
 
 void Field::Alloc(){
     T = new int*[L];

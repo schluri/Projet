@@ -9,7 +9,7 @@ class Field : public QObject
      Q_OBJECT
 public:
     explicit Field(QObject *parent = 0);
-    //~Field();
+    ~Field();
 
 
     Q_INVOKABLE int showPlayer();
