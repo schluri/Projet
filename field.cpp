@@ -56,12 +56,10 @@ void Field::changePlayer()
      if (player == 0)
      {
          player = 1;
-         qDebug() << "Yellow's turn!";
      }
      else
      {
          player = 0;
-         qDebug() << "Blue's turn!";
      }
 }
 
@@ -215,10 +213,3 @@ bool Field::showReplaceYellow()
     return replaceYellow;
 }
 
-
-/*
-QString Field::readField()
-{
-    return QString::number(420);
-}
-*/
