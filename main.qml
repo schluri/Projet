@@ -780,20 +780,12 @@ ApplicationWindow {
                                 switch(game.showPlayer())
                                 {
                                 case 1:
-                                    //if(game.showMovesYellow() < 3)
-
-                                   // {
                                         info.text = "Yellow's turn!"
                                         break
-                                   // }
 
                                 case 0:
-                                   // if(game.showMovesBlue() < 3)
-
-                                   // {
                                         info.text = "Blue's turn!"
                                         break
-                                   // }
                                 }
                              }
                   else

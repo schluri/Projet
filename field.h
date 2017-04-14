@@ -31,18 +31,6 @@ public:
 
         int player = 1;
 
-
-
-
-
-   // Q_PROPERTY(QString cptQML READ readField NOTIFY fieldChanged);
-   // QString readField();
-
-
-
-signals:
-   // void fieldChanged();
-
 private:
     int L = 3;
     int C = 3;
